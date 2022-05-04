@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class EmployeeWageComputationProgram {
+class EmployeeWage {
     public static final int WAGE_PER_HOUR = 20;
     public static final int FULL_DAY_HOUR = 8;
     public static final int PART_TIME_HOUR = 4;
@@ -9,9 +9,7 @@ public class EmployeeWageComputationProgram {
     public static final int MAX_WORKING_DAYS_PER_MONTH = 20;
     public static final int TOTAL_WORKING_HOURS_PER_MONTH = 100;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wage Computation Program");
-
+    public static void totalWage() {
         int dailyWage = 0;
         int totalEmpWage = 0;
         int totalHours = 0;
@@ -37,5 +35,12 @@ public class EmployeeWageComputationProgram {
             System.out.println(empCheck + " Daily Wage of an Employee: " + dailyWage);
         }
         System.out.println("Total Employee Wage for a Month: " + totalEmpWage);
+    }
+}
+
+public class EmployeeWageComputationProgram {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Employee Wage Computation Program");
+        EmployeeWage.totalWage();
     }
 }
