@@ -1,24 +1,17 @@
 package com.bridgelabz;
 
-class EmployeeWage {
+class EmployeeWageBuilder {
     public static final int FULL_DAY_HOUR = 8;
     public static final int PART_TIME_HOUR = 4;
     public static final int IS_FULL_DAY_PRESENT = 1;
     public static final int IS_HALF_DAY_PRESENT = 2;
 
     private String companies;
-    private int wagePerHour;
-    private int workingDays;
-    private int workingHoursPerMonth;
+    private int wagePerHour = 20;
+    private int workingDays = 22;
+    private int workingHoursPerMonth = 80;
 
-    public EmployeeWage(String companies, int wagePerHour, int workingDays, int workingHoursPerMonth) {
-        this.companies=companies;
-        this.wagePerHour=wagePerHour;
-        this.workingDays=workingDays;
-        this.workingHoursPerMonth=workingHoursPerMonth;
-    }
-
-    double companyEmpWage() {
+    int companyEmpWage() {
         int dailyWage = 0;
         int totalEmpWage = 0;
         int totalHours = 0;
@@ -51,12 +44,12 @@ public class EmployeeWageComputationProgram {
     public static void main(String[] args) {
         System.out.println("Welcome to Employee Wage Computation Program");
         System.out.println();
-        EmployeeWage obj1 = new EmployeeWage("XYZ", 20, 24, 80);
-        EmployeeWage obj2 = new EmployeeWage("GFG", 25, 22, 90);
-        EmployeeWage obj3 = new EmployeeWage("MEG", 24, 23, 100);
+        EmployeeWageBuilder obj1 = new EmployeeWageBuilder();
+        EmployeeWageBuilder obj2 = new EmployeeWageBuilder();
+        EmployeeWageBuilder obj3 = new EmployeeWageBuilder();
 
-        System.out.println("Total Emp Wage of Company XYZ: "+obj1.companyEmpWage());
-        System.out.println("Total Emp Wage of Company GFG: "+obj2.companyEmpWage());
-        System.out.println("Total Emp Wage of Company MEG: "+obj3.companyEmpWage());
+        System.out.println("Total Emp Wage of Company XYZ: " + obj1.companyEmpWage());
+        System.out.println("Total Emp Wage of Company GFG: " + obj2.companyEmpWage());
+        System.out.println("Total Emp Wage of Company MEG: " + obj3.companyEmpWage());
     }
 }
